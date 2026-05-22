@@ -7235,8 +7235,17 @@ if __name__ == "__main__":
             def _scheduled_message_callback(task_id: str, message: str):
                 try:
                     port = int(os.getenv("PORT", 7766))
+                    headers = {}
+                    try:
+                        from services.auth_service import get_or_create_token
+                        token = get_or_create_token()
+                        if token:
+                            headers["X-Amira-Token"] = token
+                    except Exception:
+                        pass
                     requests.post(
                         f"http://127.0.0.1:{port}/api/chat",
+                        headers=headers,
                         json={"message": message, "session_id": f"cron_{task_id}", "stream": False},
                         timeout=60,
                     )

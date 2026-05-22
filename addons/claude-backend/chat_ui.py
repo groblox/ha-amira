@@ -175,11 +175,25 @@ def get_chat_ui():
             "files_empty": "Empty directory",
             "files_error": "Error loading",
             "files_close_panel": "Close file panel",
+            "files_edit": "Modify",
+            "files_saving": "Saving...",
+            "files_truncation_warning": "Warning: the new content ({new_size} KB) is much shorter than the original file ({original_size} KB).\n\nIt might be truncated content. Proceed anyway?",
+            "messaging_connected": "{provider} connected.",
+            "messaging_disconnected": "{provider} disconnected.",
+            "messaging_days_ago": "connected ({days} days ago)",
+            "messaging_connected_simple": "connected",
+            "save_failed": "Save failed",
+            "gemini_paste_cookies": "Please paste both cookies (__Secure-1PSID and __Secure-1PSIDTS).",
+            "chatgpt_paste_json": "Please paste the session JSON or token first.",
+            "cookies_saved_session_validated": "Cookies saved and session validated!",
             "files_context_label": "File context:",
             "messaging_no_chats": "No messaging chats yet",
             "messaging_messages": "Messages",
             "messaging_delete": "Delete",
             "messaging_confirm_delete": "Delete this chat?",
+            "messaging_you": "👤 You",
+            "messaging_bot": "🤖 Bot",
+            "messaging_no_messages": "No messages",
             "no_backups": "No backups yet",
             "restore": "Restore",
             "confirm_restore_backup": "Restore this backup? The current file will be replaced.",
@@ -521,11 +535,25 @@ def get_chat_ui():
             "files_empty": "Cartella vuota",
             "files_error": "Errore caricamento",
             "files_close_panel": "Chiudi pannello file",
+            "files_edit": "Modifica",
+            "files_saving": "Salvataggio...",
+            "files_truncation_warning": "Attenzione: il nuovo contenuto ({new_size} KB) è molto più corto del file originale ({original_size} KB).\n\nPotrebbe essere contenuto troncato. Procedere comunque?",
+            "messaging_connected": "{provider} connesso.",
+            "messaging_disconnected": "{provider} disconnesso.",
+            "messaging_days_ago": "connesso ({days}g fa)",
+            "messaging_connected_simple": "connesso",
+            "save_failed": "Salvataggio fallito",
+            "gemini_paste_cookies": "Incolla entrambi i cookie (__Secure-1PSID e __Secure-1PSIDTS).",
+            "chatgpt_paste_json": "Incolla prima il JSON o il token.",
+            "cookies_saved_session_validated": "Cookie salvati e sessione validata!",
             "files_context_label": "File di contesto:",
             "messaging_no_chats": "Nessuna chat di messaggi",
             "messaging_messages": "Messaggi",
             "messaging_delete": "Elimina",
             "messaging_confirm_delete": "Eliminare questa chat?",
+            "messaging_you": "👤 Tu",
+            "messaging_bot": "🤖 Bot",
+            "messaging_no_messages": "Nessun messaggio",
             "no_backups": "Nessun backup",
             "restore": "Ripristina",
             "confirm_restore_backup": "Ripristinare questo backup? Il file attuale verrà sostituito.",
@@ -867,11 +895,25 @@ def get_chat_ui():
             "files_empty": "Directorio vacío",
             "files_error": "Error al cargar",
             "files_close_panel": "Cerrar panel de archivo",
+            "files_edit": "Modificar",
+            "files_saving": "Guardando...",
+            "files_truncation_warning": "Advertencia: el nuevo contenido ({new_size} KB) es mucho más corto que el archivo original ({original_size} KB).\n\nPodría ser contenido truncado. ¿Proceder de todos modos?",
+            "messaging_connected": "{provider} conectado.",
+            "messaging_disconnected": "{provider} desconectado.",
+            "messaging_days_ago": "conectado (hace {days} días)",
+            "messaging_connected_simple": "conectado",
+            "save_failed": "Error al guardar",
+            "gemini_paste_cookies": "Por favor pegue ambas cookies (__Secure-1PSID y __Secure-1PSIDTS).",
+            "chatgpt_paste_json": "Por favor pegue primero el JSON de sesión o token.",
+            "cookies_saved_session_validated": "¡Cookies guardadas y sesión validada!",
             "files_context_label": "Archivo de contexto:",
             "messaging_no_chats": "Sin chats de mensajes",
             "messaging_messages": "Mensajes",
             "messaging_delete": "Eliminar",
             "messaging_confirm_delete": "¿Eliminar este chat?",
+            "messaging_you": "👤 Tú",
+            "messaging_bot": "🤖 Bot",
+            "messaging_no_messages": "Sin mensajes",
             "no_backups": "Sin copias de seguridad",
             "restore": "Restaurar",
             "confirm_restore_backup": "¿Restaurar esta copia? El archivo actual será reemplazado.",
@@ -1211,11 +1253,25 @@ def get_chat_ui():
             "files_empty": "Dossier vide",
             "files_error": "Erreur de chargement",
             "files_close_panel": "Fermer le panneau",
+            "files_edit": "Modifier",
+            "files_saving": "Enregistrement...",
+            "files_truncation_warning": "Attention : le nouveau contenu ({new_size} KB) est beaucoup plus court que le fichier d'origine ({original_size} KB).\n\nIl pourrait s'agir d'un contenu tronqué. Continuer quand même ?",
+            "messaging_connected": "{provider} connecté.",
+            "messaging_disconnected": "{provider} déconnecté.",
+            "messaging_days_ago": "connecté (il y a {days} jours)",
+            "messaging_connected_simple": "connecté",
+            "save_failed": "Enregistrement échoué",
+            "gemini_paste_cookies": "Veuillez coller les deux cookies (__Secure-1PSID et __Secure-1PSIDTS).",
+            "chatgpt_paste_json": "Veuillez coller le JSON de session ou le jeton en premier.",
+            "cookies_saved_session_validated": "Cookies enregistrés et session validée !",
             "files_context_label": "Fichier de contexte:",
             "messaging_no_chats": "Pas de chats de messages",
             "messaging_messages": "Messages",
             "messaging_delete": "Supprimer",
             "messaging_confirm_delete": "Supprimer ce chat ?",
+            "messaging_you": "👤 Vous",
+            "messaging_bot": "🤖 Bot",
+            "messaging_no_messages": "Aucun message",
             "no_backups": "Aucune sauvegarde",
             "restore": "Restaurer",
             "confirm_restore_backup": "Restaurer cette sauvegarde ? Le fichier actuel sera remplacé.",
@@ -4653,11 +4709,11 @@ def get_chat_ui():
             if (tab.editMode) {{
                 const saveBtn = document.createElement('button');
                 saveBtn.className = 'file-editor-btn save';
-                saveBtn.textContent = '\U0001f4be Salva';
+                saveBtn.textContent = '\U0001f4be ' + (T.config_save || 'Save');
                 saveBtn.onclick = () => saveFileContent(fileActiveTabIdx);
                 const cancelBtn = document.createElement('button');
                 cancelBtn.className = 'file-editor-btn cancel';
-                cancelBtn.textContent = 'Annulla';
+                cancelBtn.textContent = T.config_cancel || 'Cancel';
                 cancelBtn.onclick = () => {{
                     tab.editMode = false; tab.editBuffer = null;
                     renderActivePanelContent();
@@ -4667,12 +4723,12 @@ def get_chat_ui():
             }} else {{
                 const editBtn = document.createElement('button');
                 editBtn.className = 'file-editor-btn edit';
-                editBtn.textContent = '\u270f\ufe0f Modifica';
+                editBtn.textContent = '\u270f\ufe0f ' + (T.files_edit || 'Modify');
                 editBtn.onclick = async () => {{
                     if (tab.hasMore) {{
                         // Load full file before editing to avoid truncation
                         editBtn.disabled = true;
-                        editBtn.textContent = 'Caricamento...';
+                        editBtn.textContent = T.files_loading || 'Loading...';
                         try {{
                             const url = apiUrl('api/files/read') + '?file=' + encodeURIComponent(tab.path);
                             const resp = await fetch(url, {{credentials:'same-origin'}});
@@ -4685,7 +4741,7 @@ def get_chat_ui():
                             tab.size = data.size;
                         }} catch(e) {{
                             editBtn.disabled = false;
-                            editBtn.textContent = '\u270f\ufe0f Modifica';
+                            editBtn.textContent = '\u270f\ufe0f ' + (T.files_edit || 'Modify');
                             alert('Errore nel caricamento completo del file: ' + (e.message || e));
                             return;
                         }}
@@ -4745,7 +4801,7 @@ def get_chat_ui():
             if (!tab || !tab.editMode) return;
             const content = tab.editBuffer !== null ? tab.editBuffer : (tab.content || '');
             const saveBtn = filePanelContentEl.querySelector('.file-editor-btn.save');
-            if (saveBtn) {{ saveBtn.disabled = true; saveBtn.textContent = 'Salvataggio...'; }}
+            if (saveBtn) {{ saveBtn.disabled = true; saveBtn.textContent = T.files_saving || 'Saving...'; }}
             try {{
                 const body = {{file: tab.path, content}};
                 if (force) body.force = true;
@@ -4756,9 +4812,11 @@ def get_chat_ui():
                 }});
                 const data = await resp.json();
                 if (data.truncation_warning) {{
-                    if (saveBtn) {{ saveBtn.disabled = false; saveBtn.textContent = '\U0001f4be Salva'; }}
+                    if (saveBtn) {{ saveBtn.disabled = false; saveBtn.textContent = '\U0001f4be ' + (T.config_save || 'Save'); }}
                     const kb = n => Math.round(n / 1024 * 10) / 10;
-                    const msg = "Attenzione: il nuovo contenuto (" + kb(data.new_size) + " KB) \u00e8 molto pi\u00f9 corto del file originale (" + kb(data.original_size) + " KB).\\n\\nPotrebbe essere contenuto troncato. Procedere comunque?";
+                    const msg = (T.files_truncation_warning || "Warning: the new content ({new_size} KB) is much shorter than the original file ({original_size} KB).\n\nIt might be truncated content. Proceed anyway?")
+                        .replace('{new_size}', kb(data.new_size))
+                        .replace('{original_size}', kb(data.original_size));
                     if (confirm(msg)) saveFileContent(idx, true);
                     return;
                 }}
@@ -4769,8 +4827,8 @@ def get_chat_ui():
                 tab.editBuffer = null;
                 renderActivePanelContent();
             }} catch(e) {{
-                if (saveBtn) {{ saveBtn.disabled = false; saveBtn.textContent = '\U0001f4be Salva'; }}
-                alert('Errore nel salvataggio: ' + (e.message || e));
+                if (saveBtn) {{ saveBtn.disabled = false; saveBtn.textContent = '\U0001f4be ' + (T.config_save || 'Save'); }}
+                alert((T.config_save_error || 'Save failed') + ': ' + (e.message || e));
             }}
         }}
 
@@ -5041,9 +5099,7 @@ def get_chat_ui():
             const hdr = document.createElement('div');
             hdr.className = 'agent-list-header';
             hdr.innerHTML = '<h3>\U0001f916 ' + (T.config_agents_title || 'Agent Profiles') + '</h3>';
-            const addBtn = document.createElement('button');
-            addBtn.className = 'agent-add-btn';
-            addBtn.textContent = '+ ' + (T.agent_add || 'Nuovo Agent');
+            addBtn.textContent = '+ ' + (T.agent_add || 'New Agent');
             addBtn.addEventListener('click', () => showAgentForm(null, wrap));
             hdr.appendChild(addBtn);
             wrap.appendChild(hdr);
@@ -5055,7 +5111,7 @@ def get_chat_ui():
 
             if (agents.length === 0) {{
                 listWrap.innerHTML = '<div style="padding:20px;text-align:center;color:#999;">'
-                    + (T.agent_none || 'Nessun agent configurato. Clicca "Nuovo Agent" per iniziare.')
+                    + (T.agent_none || 'No agents configured. Click "New Agent" to get started.')
                     + '</div>';
             }} else {{
                 agents.forEach(a => {{
@@ -5121,12 +5177,10 @@ def get_chat_ui():
             formWrap.style.cssText = 'display:flex;flex-direction:column;height:100%;';
 
             // Header
-            const hdr = document.createElement('div');
-            hdr.className = 'agent-list-header';
-            hdr.innerHTML = '<h3>' + (isNew ? (T.agent_new || '\U0001f916 Nuovo Agent') : ('\u270f\ufe0f ' + (agentData.name || agentData.id))) + '</h3>';
+            hdr.innerHTML = '<h3>' + (isNew ? (T.agent_new || '\U0001f916 New Agent') : ('\u270f\ufe0f ' + (agentData.name || agentData.id))) + '</h3>';
             const backBtn = document.createElement('button');
             backBtn.className = 'config-cancel-btn';
-            backBtn.textContent = '\u2190 ' + (T.agent_back || 'Indietro');
+            backBtn.textContent = '\u2190 ' + (T.agent_back || 'Back');
             backBtn.style.cssText = 'padding:4px 10px;font-size:11px;';
             backBtn.addEventListener('click', () => openAgentFormUI());
             hdr.appendChild(backBtn);
@@ -9144,7 +9198,7 @@ def get_chat_ui():
                 const body = document.getElementById('msgModalBody');
                 body.innerHTML = '';
                 if (messages.length === 0) {{
-                    body.innerHTML = '<div style="text-align:center;color:#999;padding:20px;font-size:13px;">Nessun messaggio</div>';
+                    body.innerHTML = `\u003cdiv style="text-align:center;color:#999;padding:20px;font-size:13px;"\u003e\${{T.messaging_no_messages || 'No messages'}}\u003c/div\u003e`;
                 }} else {{
                     messages.forEach(msg => {{
                         const isUser = msg.role === 'user';
@@ -9156,7 +9210,7 @@ def get_chat_ui():
 
                         const label = document.createElement('div');
                         label.className = 'msg-bubble-label';
-                        label.textContent = isUser ? '👤 Tu' : '🤖 Bot';
+                        label.textContent = isUser ? (T.messaging_you || '👤 You') : (T.messaging_bot || '🤖 Bot');
                         label.style.textAlign = isUser ? 'right' : 'left';
 
                         const bubble = document.createElement('div');

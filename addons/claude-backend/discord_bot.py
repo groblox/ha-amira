@@ -120,8 +120,17 @@ class DiscordBot:
             "history": history,
         }
 
+        headers = {}
         try:
-            resp = requests.post(f"{self.api_base}/api/discord/message", json=payload, timeout=90)
+            from services.auth_service import get_or_create_token
+            token = get_or_create_token()
+            if token:
+                headers["X-Amira-Token"] = token
+        except Exception as e:
+            logger.warning("Discord: could not fetch auth token: %s", e)
+
+        try:
+            resp = requests.post(f"{self.api_base}/api/discord/message", json=payload, headers=headers, timeout=90)
             if resp.status_code != 200:
                 logger.warning("Discord API error: %s %s", resp.status_code, resp.text[:200])
                 await self._send_chunks(message.channel, "⚠️ API error, please try again.")

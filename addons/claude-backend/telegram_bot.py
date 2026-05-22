@@ -178,7 +178,17 @@ class TelegramBot:
                 "text": text,
                 "history": history
             }
-            resp = requests.post(api_url, json=payload, timeout=60)
+            
+            headers = {}
+            try:
+                from services.auth_service import get_or_create_token
+                token = get_or_create_token()
+                if token:
+                    headers["X-Amira-Token"] = token
+            except Exception as e:
+                logger.warning(f"Telegram: could not fetch auth token: {e}")
+
+            resp = requests.post(api_url, json=payload, headers=headers, timeout=60)
             logger.info(f"Telegram: API response status {resp.status_code}")
             
             if resp.status_code == 200:
