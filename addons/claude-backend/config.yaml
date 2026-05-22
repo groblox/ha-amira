@@ -5,7 +5,7 @@ slug: claude-backend
 description: >-
   Amira - AI-powered smart home assistant with Claude, ChatGPT, Gemini,
   NVIDIA NIM and GitHub Models (40+ AI models) + Telegram & WhatsApp
-url: https://github.com/Bobsilvio/ha-claude
+url: https://github.com/groblox/ha-amira
 init: false
 arch:
   - aarch64
@@ -84,7 +84,7 @@ schema:
   log_level: list(normal|verbose|debug)?
   api_port: port?
 
-documentation: https://github.com/Bobsilvio/ha-claude
-support: https://github.com/Bobsilvio/ha-claude/issues
+documentation: https://github.com/groblox/ha-amira
+support: https://github.com/groblox/ha-amira/issues
 maintainers:
-  - Bobsilvio
+  - groblox
