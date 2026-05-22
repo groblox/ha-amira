@@ -4814,9 +4814,9 @@ def get_chat_ui():
                 if (data.truncation_warning) {{
                     if (saveBtn) {{ saveBtn.disabled = false; saveBtn.textContent = '\U0001f4be ' + (T.config_save || 'Save'); }}
                     const kb = n => Math.round(n / 1024 * 10) / 10;
-                    const msg = (T.files_truncation_warning || "Warning: the new content ({new_size} KB) is much shorter than the original file ({original_size} KB).\n\nIt might be truncated content. Proceed anyway?")
-                        .replace('{new_size}', kb(data.new_size))
-                        .replace('{original_size}', kb(data.original_size));
+                    const msg = (T.files_truncation_warning || "Warning: the new content ({{new_size}} KB) is much shorter than the original file ({{original_size}} KB).\n\nIt might be truncated content. Proceed anyway?")
+                        .replace('{{new_size}}', kb(data.new_size))
+                        .replace('{{original_size}}', kb(data.original_size));
                     if (confirm(msg)) saveFileContent(idx, true);
                     return;
                 }}
